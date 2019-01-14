@@ -1,7 +1,11 @@
 % function epsilon=EpsMat(w,Material) 
-% Returns an array of complex dielectric permittivities. The input paramters 
-% are photon energy w in eV, and a string variable Material. Material can
-% be Material = 'Au', 'Ag', 'Si', 'Dr'
+% Returns an array of complex dielectric permittivities.
+%
+% Input paramters 
+% ---------------
+%   w [eV] -- photon energy
+%   Material = 'Au', 'Ag', 'Si', 'Dr'
+% 
 % 'Dr' is for Drude model, which is defined by the formula
 % epsilon=epsinf--(wp)^2./(w.*(w+1i*gamma));
 
