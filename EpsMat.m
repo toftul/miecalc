@@ -29,9 +29,11 @@ function epsilon=EpsMat(w, material)
         epsIm=interp1(wlData, epsImData, wl, 'linear', 0);
         epsilon=complex(epsRe, epsIm);
     elseif strcmp(material, 'Ag')
-        data=dlmread ('refractiveindex/AgWerner.txt');
+        %data=dlmread ('refractiveindex/AgWerner.txt');
+        data=dlmread ('refractiveindex/AgJohnson.txt');
         % depends on file from refractiveindex.info
-        numRows = 150;
+        %numRows = 150;  % for Werner
+        numRows = 49;  % for Johnson
         % first numRows elements of the first column
         wlData = data(1:numRows, 1);  % [\mum]
         nData = data(1:numRows, 2);
